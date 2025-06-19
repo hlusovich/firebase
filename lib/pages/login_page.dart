@@ -107,7 +107,7 @@ class _LoginPageState extends State<LoginPage> {
                             backgroundColor: Theme.of(context).primaryColor,
                           ),
                           child: const Text(
-                            'Submit',
+                            'Sign In',
                             style: TextStyle(color: Colors.white),
                           ),
                         ),
