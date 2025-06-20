@@ -4,6 +4,7 @@ import 'package:myapp/pages/main_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:myapp/bloc/user_bloc.dart';
 import 'package:myapp/pages/options_page.dart';
+import 'package:myapp/pages/settings.dart';
 
 void main() {
   runApp(
@@ -69,7 +70,8 @@ class _MainAppState extends State<MainApp> {
             index: _selectedIndex,
             children:     [LoginPage(onSubmit: goToMainPage), 
       MainPage(goToLogin: goToLogin,),
-      OptionsPage(goToLogin: goToLogin)],
+      OptionsPage(goToLogin: goToLogin),
+      const SettingsPage()],
           ),
           bottomNavigationBar: BottomNavigationBar(
             items: const <BottomNavigationBarItem>[
@@ -84,6 +86,10 @@ class _MainAppState extends State<MainApp> {
             BottomNavigationBarItem(
               icon: Icon(Icons.settings),
               label: 'Options',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings_applications),
+              label: 'Settings',
             ),
           ],
             currentIndex: _selectedIndex,
